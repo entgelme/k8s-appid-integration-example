@@ -1,0 +1,12 @@
+{
+  "name": "hello-world-frontend-demo",
+  "private": false,
+  "version": "0.0.1",
+  "description": "Basic hello world frontend application for Node.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "jquery": "^3.3.1",
+    "js-cookie": "^2.2.0",
+    "jsonwebtoken": "^8.3.0"
+  }
+}

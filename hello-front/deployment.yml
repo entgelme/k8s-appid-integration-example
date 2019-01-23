@@ -1,0 +1,39 @@
+---
+# Application to deploy
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-frontend
+spec:
+  replicas: 1 # tells deployment to run x pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: hello-world
+        tier: frontend
+    spec:
+      containers:
+      - name: hello-frontend
+        image: $IMAGE
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+---
+# Service to expose frontend
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-frontend-service
+  labels:
+    app: hello-world
+    tier: frontend
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080 # Internal Port
+    targetPort: 8080
+  selector:
+    app: hello-world
+    tier: frontend

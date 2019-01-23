@@ -1,0 +1,7 @@
+node_modules
+npm-debug.log
+vcap-local.json
+depltmp.yml
+foo1server.crt
+foo1server.key
+

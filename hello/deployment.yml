@@ -1,0 +1,40 @@
+---
+# Application to deploy
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: hello-world
+spec:
+  replicas: 1 # tells deployment to run x pods matching the template
+  template: # create pods using pod definition in this template
+    metadata:
+      labels:
+        app: hello-world
+        tier: backend
+    spec:
+      containers:
+      - name: hello-world
+        image: $IMAGE
+        imagePullPolicy: Always
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+---
+# Service to expose backend
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-service
+  labels:
+    app: hello-world
+    tier: backend
+spec:
+  type: ClusterIP
+  ports:
+  - port: 8080 # Internal Port
+    targetPort: 8080
+  selector:
+    app: hello-world
+    tier: backend
+
