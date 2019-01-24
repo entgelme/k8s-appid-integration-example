@@ -1,36 +1,36 @@
-# The hello backend
+# The hello Backend
 
 ## API functions
 It provides an API with these functions
 
-/api/user
-Reads the identity token from the http request header and returns it.
-Basically, the token contains information about the current logged in user.
+* /api/user
+  Reads the identity token from the http request header and returns it.
+  Basically, the token contains information about the current logged in user.
 
-/api/login
-not implemented yet
+* /api/login
+  not implemented yet
 
-/api/logout
-not implemented yet
+* /api/logout
+  not implemented yet
 
-/api/user/appid_callback
-a callback that may be called by the AppID service during the OAuth/OICD authorization flow.
+* /api/user/appid_callback
+  a callback that may be called by the AppID service during the OAuth/OICD authorization flow.
 
 ## Howto prepare and start the backend
 
 ### Prerequisites
-* [IBM Cloud] (https://cloud.ibm.com) Account (PAYG or subscription, but not Lite)
-* [IBM Kubernetes Service (IKS) Cluster (Standard, not Lite)] (https://console.bluemix.net/containers-kubernetes/catalog/cluster) 
-The reason is, that we want to use an ingress, which is only usable with an IKS standard cluster. 
+* [IBM Cloud](https://cloud.ibm.com) Account (PAYG or subscription, but not Lite)
+* [IBM Kubernetes Service (IKS) Cluster (Standard, not Lite)](https://console.bluemix.net/containers-kubernetes/catalog/cluster) 
+  The reason is, that we want to use an ingress, which is only usable with an IKS standard cluster. 
 
-* [IBM Cloud Container Registry] (https://console.bluemix.net/containers-kubernetes/launchRegistryView)
-* [IBM Cloud CLI] (https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) 
-* [IBM Kubernetes Service and IBM Cloud Container Registry CLI plugins] (https://console.bluemix.net/docs/cli/reference/ibmcloud/extend_cli.html#plug-ins)
-* [Docker] (https://docs.docker.com/install/)
-* [git] (https://git-scm.com/downloads)
-* [node.js and npm] (https://nodejs.org)
+* [IBM Cloud Container Registry](https://console.bluemix.net/containers-kubernetes/launchRegistryView)
+* [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) 
+* [IBM Kubernetes Service and IBM Cloud Container Registry CLI plugins](https://console.bluemix.net/docs/cli/reference/ibmcloud/extend_cli.html#plug-ins)
+* [Docker](https://docs.docker.com/install/)
+* [git](https://git-scm.com/downloads)
+* [node.js and npm](https://nodejs.org)
 
-Ensure you have the latest version of plugins used in this tutorial; use 
+To ensure that you have the latest version of plugins used in this tutorial, use 
 
 ```script
 ic plugin update --all 
@@ -54,7 +54,7 @@ ic cr login
 
 ### Create an AppID service and bind it to the k8s cluster
 
-Create an [App ID service] (https://console.bluemix.net/catalog/services/AppID) instance. 
+Create an [App ID service](https://console.bluemix.net/catalog/services/AppID) instance. 
 ```script
 ic resource service-instance-create <appid service instance name> appid lite <region> 
 ```
@@ -73,7 +73,7 @@ Secret Name:   binding-<appid service instance name>
 
 ### Setup your ingress 
 
-Load helloingress.yml in an editor. 
+Load `helloingress.yml` in an editor. 
 
 1. Set the name of the secret containing the App ID credentials
 
@@ -120,9 +120,7 @@ Replace the placeholder in the entry
 
 with the `Ingress Secret` name you derived from the `ic ks cluster-get` command before.
 
-
-
-Save your changes to helloingress.yml.
+Save your changes to `helloingress.yml`.
 
 
 ### Set up AppID
@@ -140,7 +138,7 @@ Therefore, ensure that the entry `Cloud Directory` is enabled.
 
 1. Set authentication settings
 
-This optional for the backend resources, when you do the according configuration for the [frontend] (https://github.com/entgelme/k8s-appid-integration-example/tree/master/hello-front).
+This optional for the backend resources, when you do the according configuration for the [frontend](https://github.com/entgelme/k8s-appid-integration-example/tree/master/hello-front).
 
 Only if the backend's API service `/api/user` shall be directly accessed, e.g. for test purposes, omitting the frontend, the backend resource callback can be configured.
 

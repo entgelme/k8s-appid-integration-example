@@ -1,4 +1,4 @@
-# Hello Frontend SPA
+# The Hello Frontend SPA
 
 ## Content
 Contains a single HTML page in /public/index.html, that uses jquery to receive the identity token information from the backend.
@@ -7,30 +7,24 @@ Contains a single HTML page in /public/index.html, that uses jquery to receive t
 
 ### Prerequisites
 ### Prerequisites
-* [IBM Cloud] (https://cloud.ibm.com) Account (PAYG or subscription, but not Lite)
-* [IBM Kubernetes Service (IKS) Cluster (Standard, not Lite)] (https://console.bluemix.net/containers-kubernetes/catalog/cluster) 
-The reason is, that we want to use an ingress, which is only usable with an IKS standard cluster. 
+* [IBM Cloud](https://cloud.ibm.com) Account (PAYG or subscription, but not Lite)
+* [IBM Kubernetes Service (IKS) Cluster (Standard, not Lite)](https://console.bluemix.net/containers-kubernetes/catalog/cluster) 
+  The reason is, that we want to use an ingress, which is only usable with an IKS standard cluster. 
 
-* [IBM Cloud Container Registry] (https://console.bluemix.net/containers-kubernetes/launchRegistryView)
-* [IBM Cloud CLI] (https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) 
-* [IBM Kubernetes Service and IBM Cloud Container Registry CLI plugins] (https://console.bluemix.net/docs/cli/reference/ibmcloud/extend_cli.html#plug-ins)
-* [Docker] (https://docs.docker.com/install/)
-* [git] (https://git-scm.com/downloads)
-* [node.js and npm] (https://nodejs.org)
+* [IBM Cloud Container Registry](https://console.bluemix.net/containers-kubernetes/launchRegistryView)
+* [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) 
+* [IBM Kubernetes Service and IBM Cloud Container Registry CLI plugins](https://console.bluemix.net/docs/cli/reference/ibmcloud/extend_cli.html#plug-ins)
+* [Docker](https://docs.docker.com/install/)
+* [git](https://git-scm.com/downloads)
+* [node.js and npm](https://nodejs.org)
 
-Ensure you have the latest version of plugins used in this tutorial; use 
-
-```script
-ic plugin update --all 
-```
-
-Ensure you have the latest version of plugins used in this tutorial; use 
+To ensure that you have the latest version of plugins used in this tutorial, use 
 
 ```script
 ic plugin update --all 
 ```
 
-See the [backend setup] (https://github.com/entgelme/k8s-appid-integration-example/tree/master/hello) description for the following components
+See the [backend setup](https://github.com/entgelme/k8s-appid-integration-example/tree/master/hello) description for the following components
 
 * an ingress that forwards http requests to /hello/... to this frontend 
 * a configured AppID service, which is bound to the k8s cluster
@@ -54,7 +48,7 @@ ic cr login
 
 ### Extend the AppID configuration
 
-Return to the App ID management dashboard. If not already open in a browser, open the [IBM Cloud dashboard] (https://cloud.ibm.com), then in the section `Services` locate the App ID service you just created. Click on it to open the service's management dashboard. 
+Return to the App ID management dashboard. If not already open in a browser, open the [IBM Cloud dashboard](https://cloud.ibm.com), then in the section `Services` locate the App ID service you just created. Click on it to open the service's management dashboard. 
 
 In the menu on the left side of the window, click on `Identity Providers>Manage`.
 In the center frame, on the top, change to the `Authentication Settings` tab.
