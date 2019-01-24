@@ -5,27 +5,11 @@ metadata:
   labels:
     app: hello-world
   annotations:
-    # enforce https
-#    kubernetes.io/ingress.allow-http: "false"
-    #
-    # client cert settings
-#    ingress.kubernetes.io/force-ssl-redirect: "true"
-    # Enable client certificate authentication
-#    ingress.kubernetes.io/auth-tls-verify-client: "on"
-    # Create the secret containing the trusted ca certificates with `kubectl create secret generic auth-tls-chain --from-file=ca.crt --namespace=default`
-#    ingress.kubernetes.io/auth-tls-secret: "default/basicwebclient-trust"
-    # Specify the verification depth in the client certificates chain
-#    ingress.kubernetes.io/auth-tls-verify-depth: "3"
-    # Specify an error page to be redirected to verification errors
-#    # nginx.ingress.kubernetes.io/auth-tls-error-page: "http://www.mysite.com/error-cert.html"
-    # Specify if certificates are passed to upstream server
-#    ingress.kubernetes.io/auth-tls-pass-certificate-to-upstream: "false"
-    ingress.bluemix.net/appid-auth: "bindSecret=binding-app-id-test namespace=default requestType=web serviceName=hello-service,hello-frontend-service"
-
-  namespace: default
+    ingress.bluemix.net/appid-auth: "bindSecret=binding-<appid service instance name> namespace=default requestType=web serviceName=hello-service,hello-frontend-service"
+  namespace: <k8s namespace>
 spec:
   rules:
-  - host: foo1.bar.com
+  - host: <cluster name>.<region>.containers.appdomain.cloud
     http:
       paths:
       - path: /api
@@ -37,7 +21,7 @@ spec:
           serviceName: hello-frontend-service
           servicePort: 8080
   tls:
-  - secretName: foo1secret
+  - secretName: <secret name> 
     hosts:
-    - foo1.bar.com
+    - <cluster name>.<region>.containers.appdomain.cloud
 
