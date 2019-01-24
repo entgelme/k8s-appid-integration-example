@@ -12,16 +12,16 @@ This is something, that can be done by the app, especially the backend, by just 
 
 
 # Solution steps
-1. [Setup the backend] (https://github.com/entgelme/k8s-appid-integration-example/tree/master/hello)
-1. [Setup the frontend] (https://github.com/entgelme/k8s-appid-integration-example/tree/master/hello-front)
+1. [Setup the backend](https://github.com/entgelme/k8s-appid-integration-example/tree/master/hello)
+1. [Setup the frontend](https://github.com/entgelme/k8s-appid-integration-example/tree/master/hello-front)
 
 ## Credits
 I reused and reworked some code from these sources:
 
-[Tutorial: Deploying apps into Kubernetes clusters] (https://console.bluemix.net/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial)
+[Tutorial: Deploying apps into Kubernetes clusters](https://console.bluemix.net/docs/containers/cs_tutorials_apps.html#cs_apps_tutorial)
 
-[IBM Cloud Blog > How-tos > Creating Spring Boot applications with App ID] (https://www.ibm.com/blogs/bluemix/2018/06/creating-spring-boot-applications-app-id/)
+[IBM Cloud Blog > How-tos > Creating Spring Boot applications with App ID](https://www.ibm.com/blogs/bluemix/2018/06/creating-spring-boot-applications-app-id/)
 
-[Securing Angular+Node.js Applications using App ID] (https://www.ibm.com/blogs/bluemix/2018/04/securing-angularnode-js-applications-using-app-id/)
+[Securing Angular+Node.js Applications using App ID](https://www.ibm.com/blogs/bluemix/2018/04/securing-angularnode-js-applications-using-app-id/)
 
 Special thanks therefore to the colleagues who provided the K8s tutorial, and Eduardo Rodriguez, as well as Anup Rokkam Pratap, and Gelareh Taban for the frontend code basis and the inspiration.
