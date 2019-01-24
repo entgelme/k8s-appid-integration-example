@@ -6,10 +6,9 @@ Contains a single HTML page in /public/index.html, that uses jquery to receive t
 ## Howto prepare and start the frontend
 
 ### Prerequisites
-### Prerequisites
 * [IBM Cloud](https://cloud.ibm.com) Account (PAYG or subscription, but not Lite)
 * [IBM Kubernetes Service (IKS) Cluster (Standard, not Lite)](https://console.bluemix.net/containers-kubernetes/catalog/cluster) 
-  The reason is, that we want to use an ingress, which is only usable with an IKS standard cluster. 
+    The reason is, that we want to use an ingress, which is only usable with an IKS standard cluster. 
 
 * [IBM Cloud Container Registry](https://console.bluemix.net/containers-kubernetes/launchRegistryView)
 * [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) 
@@ -58,7 +57,7 @@ Take the `Ingress Subdomain` name, prepend it with the https scheme, and append 
 **Note**: the  can be derived by the command `ic ks cluster-get <cluster name>` command before.
 
 Set the resulting string 
-> https://<cluster name>.<region>.containers.appdomain.cloud/hello/appid_callback
+> https://\<cluster name>.\<region>.containers.appdomain.cloud/hello/appid_callback
 
 to the field `Add web redirect URLs` and click on the `+` button to add that URL.
 

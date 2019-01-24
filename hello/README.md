@@ -107,7 +107,7 @@ Ingress Subdomain:      <cluster name>.<region>.containers.appdomain.cloud
 Ingress Secret:         <secret name>   
 ...
 ```
-Replace the values (<cluster name>.<region>.containers.appdomain.cloud) of the entries
+Replace the values (\<cluster name>.\<region>.containers.appdomain.cloud) of the entries
 > spec.rules[0].host
 and
 > spec.tls.hosts[0]
@@ -146,7 +146,7 @@ In the center frame, on the top, click on the `Authentication Settings` tab.
 Take the `Ingress Subdomain` name you derived from the `ic ks cluster-get` command before, prepend it with the https scheme, and append the route /api/user/appid_callback. 
 
 Set the resulting string 
-> https://<cluster name>.<region>.containers.appdomain.cloud/api/user/appid_callback
+> https://\<cluster name>.\<region>.containers.appdomain.cloud/api/user/appid_callback
 
 to the field `Add web redirect URLs` and click on the `+` button to add that URL.
 
@@ -158,7 +158,7 @@ Open the file `./hello/build_run.sh` in an editor.
 
 Set BX_REGISTRY and NAMESPACE variables in the script to values that reflect your environment. They represent the container image registry, that shall receive the image after the build is finished, and the k8s namespace, which the containers shall be deployed to.
 
-For the registry, you might decide to use the one provided with the IBM Kubernetes service. These have a format like `registry.<region>.bluemix.net/<registry namespace>/`
+For the registry, you might decide to use the one provided with the IBM Kubernetes service. These have a format like `registry.\<region>.bluemix.net/\<registry namespace>/`
 
 For more details refer to https://console.bluemix.net/docs/services/Registry .
 
