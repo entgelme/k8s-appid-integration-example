@@ -102,7 +102,7 @@ Finally, in  a browser, open the frontend SPA at the URL
 
 You will be redirected to the Login page of the App ID service. After successful login using the user credentials configured in App ID, the original request is redirected back to the original destination /hello. The web app is loading, gets the currently logged in user information from the backend and displays it in the html page.
 
-(helloscreen.jpg)
+![hello screenshot](https://github.com/entgelme/k8s-appid-integration-example/blob/master/hello-front/helloscreen.jpg)
 
 
 
