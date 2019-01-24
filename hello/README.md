@@ -73,7 +73,7 @@ Secret Name:   binding-<appid service instance name>
 
 ### Setup your ingress 
 
-Load `helloingress.yml` in an editor. 
+Load `./hello/helloingress.yml` in an editor. 
 
 1. Set the name of the secret containing the App ID credentials
 
@@ -120,7 +120,7 @@ Replace the placeholder in the entry
 
 with the `Ingress Secret` name you derived from the `ic ks cluster-get` command before.
 
-Save your changes to `helloingress.yml`.
+Save your changes to `./hello/helloingress.yml`.
 
 
 ### Set up AppID
@@ -164,7 +164,7 @@ For more details refer to https://console.bluemix.net/docs/services/Registry .
 
 To execute the backend build, the deployment to the k8s cluster, as well as the ingress deployment, open a command line window.
 
-Change to the subdirectory /hello 
+Change to the subdirectory `/hello` 
 
 Simply call
 

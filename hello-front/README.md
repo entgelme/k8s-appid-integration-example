@@ -76,7 +76,7 @@ For more details refer to https://console.bluemix.net/docs/services/Registry .
 
 To execute the frontend build, the deployment to the k8s cluster, as well as the ingress deployment, open a command line window.
 
-Change to the subdirectory /hello-front 
+Change to the subdirectory `/hello-front` 
 
 Simply call
 
