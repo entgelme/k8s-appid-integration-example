@@ -8,7 +8,7 @@
 
 # Change the names of the Container image registry BX_REGISTRY 
 # and the k8s NAMESPACE to deploy to according to your needs:
-BX_REGISTRY=registry.<region>.bluemix.net/<registry namespace>/
+BX_REGISTRY=<region>.icr.io/<registry namespace>
 echo Using registry $BX_REGISTRY
 
 NAMESPACE=default

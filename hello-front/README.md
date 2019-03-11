@@ -7,12 +7,12 @@ Contains a single HTML page in /public/index.html, that uses jquery to receive t
 
 ### Prerequisites
 * [IBM Cloud](https://cloud.ibm.com) Account (PAYG or subscription, but not Lite)
-* [IBM Kubernetes Service (IKS) Cluster (Standard, not Lite)](https://console.bluemix.net/containers-kubernetes/catalog/cluster) 
-    The reason is, that we want to use an ingress, which is only usable with an IKS standard cluster. 
+* [IBM Kubernetes Service (IKS) Cluster (Standard, not Lite)](https://cloud.ibm.com/containers-kubernetes/catalog/cluster) 
+  The reason is, that we want to use an ingress, which is only usable with an IKS standard cluster. 
 
-* [IBM Cloud Container Registry](https://console.bluemix.net/containers-kubernetes/launchRegistryView)
-* [IBM Cloud CLI](https://console.bluemix.net/docs/cli/reference/ibmcloud/download_cli.html#install_use) 
-* [IBM Kubernetes Service and IBM Cloud Container Registry CLI plugins](https://console.bluemix.net/docs/cli/reference/ibmcloud/extend_cli.html#plug-ins)
+* [IBM Cloud Container Registry](https://cloud.ibm.com/docs/services/Registry)
+* [IBM Cloud CLI](https://cloud.ibm.com/docs/home/tools) 
+* [IBM Kubernetes Service CLI plugin](https://cloud.ibm.com/docs/container-service-cli-plugin/kubernetes-service-cli.html) and [IBM Cloud Container Registry CLI plugin](https://cloud.ibm.com/docs/container-registry-cli-plugin/container-registry-cli.html)
 * [Docker](https://docs.docker.com/install/)
 * [git](https://git-scm.com/downloads)
 * [node.js and npm](https://nodejs.org)
@@ -69,9 +69,9 @@ Open the file `./hello-front/build_run.sh` in an editor.
 
 Set BX_REGISTRY and NAMESPACE variables in the script to values that reflect your environment. They represent the container image registry, that shall receive the image after the build is finished, and the k8s namespace, which the containers shall be deployed to.
 
-For the registry, you might decide to use the one provided with the IBM Kubernetes service. These have a format like `registry.<region>.bluemix.net/<registry namespace>/`
+For the registry, you might decide to use the one provided with the IBM Kubernetes service. These have a format like `<region>.icr.io/<registry namespace>`
 
-For more details refer to https://console.bluemix.net/docs/services/Registry .
+For more details refer to https://cloud.ibm.com/docs/services/Registry .
 
 To execute the frontend build, the deployment to the k8s cluster, as well as the ingress deployment, open a command line window.
 
