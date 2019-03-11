@@ -3,7 +3,7 @@
 This example demonstrates a single page app (SPA), using a backend, both residing in individual containers in IBM Kubernetes Service, with an ingress to control incoming requests, and BOTH protected by AppID commonly and transparently.
 
 A general pattern when securing an SPA, is not to secure the SPA itself, but the backend it is using. This presumes, that sensitive data should be stored only on the backend.
-See this [blog] (https://www.ibm.com/blogs/bluemix/2018/04/securing-angularnode-js-applications-using-app-id/) for a short discussion about that security pattern.
+See this [blog](https://www.ibm.com/blogs/bluemix/2018/04/securing-angularnode-js-applications-using-app-id/) for a short discussion about that security pattern.
 
 
 To its extend, there may exist additional requirements to protect the SPA itself including its scripts from unauthorized access. Imagine, your are just developing a very cool and very innovative app, but you don't want anyone to see it or even get aware of what secret and fancy stuff you are working on, until your prototype is mature enough to being demonstrated to the public. Until then, you want to give access to the SPA only to the handfull of your team mates, so that they could review and test it. 
